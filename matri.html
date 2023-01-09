@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Matrix</title>
+	<style type="text/css">
+		.lower{
+			width: 150px;
+			height: 150px;
+			background: gray;
+		}
+		.matrix{
+			width: 150px;
+			height: 150px;
+			background: skyblue;
+			transform: matrix(1, 1, 1, 1);
+			transition: transform 2s ease;
+		}
+		.lower:hover .matrix{
+			transform: matrix(1, -0.3, 0, 1, 0, 0);
+		}
+		.rotateX{
+			width: 150px;
+			height: 150px;
+			background: skyblue;
+			transform: perspective(1) scaleZ(1) rotateX(0deg);
+			transition: transform 2s ease;
+		}
+		.lower:hover .rotateX{
+			transform: perspective(500px) scaleZ(2) rotateX(60deg);
+		}
+		.rotateY{
+			width: 150px;
+			height: 150px;
+			background: skyblue;
+			transform: perspective(1) scaleZ(1) rotateY(0deg);
+			transition: transform 2s ease;
+		}
+		.lower:hover .rotateY{
+			transform: perspective(500px) scaleZ(2) rotateY(45deg);
+		}
+	</style>
+</head>
+<body>
+	<p>The matrix() method combines all the 2D transform methods into one.</p>
+	<p>The matrix() method take six parameters, containing mathematic functions, which allows you to rotate, scale, move (translate), and skew elements.</p>
+	<p>The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())</p>
+	<h1>The matrix() Method</h1>
+	<p>The matrix() method combines all the 2D transform methods into one.</p>
+	<div class="lower">
+		<div class="matrix">matrix</div>
+	</div>
+	<br>
+	<div class="lower">
+		<div class="rotateX">rotateX</div>
+	</div>
+	<br>
+	<div class="lower">
+		<div class="rotateY">rotateY</div>
+	</div>
+</body>
+</html>
